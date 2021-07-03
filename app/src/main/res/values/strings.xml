@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestTaskApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Войти</string>
+    <string name="logout_button_description">logout_button</string>
+    <string name="internet_info">Нет соединения с интернетом, пожалуйста, убидесть что у вас есть интернет и попробуйте заново.</string>
+
+</resources>
