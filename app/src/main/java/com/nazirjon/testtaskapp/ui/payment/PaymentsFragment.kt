@@ -1,10 +1,11 @@
 package com.nazirjon.testtaskapp.ui.payment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +15,7 @@ import com.nazirjon.testtaskapp.databinding.FragmentPaymentsBinding
 import com.nazirjon.testtaskapp.ui.auth.AuthFragment
 import com.nazirjon.testtaskapp.viewModel.PaymentsViewModel
 import com.nazirjon.testtaskapp.viewModel.PaymentsViewModelFactory
+
 
 class PaymentsFragment : Fragment() {
 
@@ -35,8 +37,8 @@ class PaymentsFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         binding = FragmentPaymentsBinding.inflate(layoutInflater)
 
@@ -75,8 +77,13 @@ class PaymentsFragment : Fragment() {
             }
         }
 
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(requireActivity()) {
+        }
+
         return binding.root
     }
+
+
 
     companion object {
         fun newInstance(token: String) =

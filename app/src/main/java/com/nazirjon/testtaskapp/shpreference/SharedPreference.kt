@@ -20,6 +20,6 @@ class SharedPreference(context: Context) {
 
     fun deleteToken() {
         val editor: SharedPreferences.Editor = sharedPref.edit()
-        editor.remove(PREFS_NAME).apply()
+        editor.remove(PREFS_NAME).clear().apply()
     }
 }
